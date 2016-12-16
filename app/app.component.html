@@ -1,0 +1,13 @@
+<h1>Hello {{name}}</h1>
+<p>A paragraph!!</p>
+
+<div *ngFor="let item of collection">
+    Reference: {{item.reference}} <br>
+    Client: {{ item.name }}
+
+    <a href (click)="getDetails($event, 'test')" id="{{item.reference}}">Details</a>
+
+    <p class="state-0" *ngIf="0 == item.state">To deliver</p>
+    <p class="state-1" *ngIf="1 == item.state">Delivering</p>
+    <p class="state-2" *ngIf="2 == item.state">Delivered</p>
+</div>
